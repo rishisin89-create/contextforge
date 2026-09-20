@@ -1,0 +1,23 @@
+{
+  "name": "contextforge",
+  "version": "1.0.0",
+  "description": "Turn messy project requirements into structured implementation plans with local AI.",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "qvac",
+    "on-device-ai",
+    "local-ai",
+    "requirements-analysis",
+    "project-planning"
+  ],
+  "author": "rishisin89-create",
+  "license": "MIT",
+  "dependencies": {
+    "@qvac/sdk": "0.19.1",
+    "express": "^5.2.1"
+  }
+}

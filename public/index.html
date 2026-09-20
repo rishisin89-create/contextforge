@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ContextForge — Requirements to Build Plan</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="hero">
+      <div>
+        <div class="brand">ContextForge</div>
+        <h1>Turn requirements into a build plan.</h1>
+        <p>
+          Paste messy project requirements and get a structured implementation
+          plan generated privately on your device.
+        </p>
+      </div>
+      <div class="local-badge">● QVAC · LOCAL AI</div>
+    </header>
+
+    <section class="workspace">
+      <div class="input-panel">
+        <div class="panel-header">
+          <div>
+            <span class="eyebrow">01 · INPUT</span>
+            <h2>Project requirements</h2>
+          </div>
+          <span id="charCount">0 / 12,000</span>
+        </div>
+
+        <textarea
+          id="requirements"
+          maxlength="12000"
+          placeholder="Example: Build a college football tournament website with team profiles, fixtures, a points table, player statistics, and an admin panel..."
+        ></textarea>
+
+        <div class="input-footer">
+          <button id="clearBtn" class="secondary-btn">Clear</button>
+          <button id="analyzeBtn" class="primary-btn">
+            Analyze Requirements →
+          </button>
+        </div>
+
+        <div id="status" class="status"></div>
+      </div>
+
+      <div class="results-panel">
+        <div class="results-header">
+          <div>
+            <span class="eyebrow">02 · OUTPUT</span>
+            <h2>Implementation brief</h2>
+          </div>
+          <span id="localStatus" class="result-badge">Waiting</span>
+        </div>
+
+        <div id="emptyState" class="empty-state">
+          <div class="empty-icon">✦</div>
+          <h3>Your plan will appear here</h3>
+          <p>
+            ContextForge will extract the goal, requirements, architecture,
+            build sequence, and unresolved questions.
+          </p>
+        </div>
+
+        <div id="results" class="results hidden">
+          <article class="result-card goal-card">
+            <span class="card-label">PROJECT GOAL</span>
+            <p id="goal"></p>
+          </article>
+
+          <article class="result-card">
+            <span class="card-label">REQUIREMENTS</span>
+            <ul id="requirementsList"></ul>
+          </article>
+
+          <article class="result-card">
+            <span class="card-label">ARCHITECTURE</span>
+            <ul id="architectureList"></ul>
+          </article>
+
+          <article class="result-card">
+            <span class="card-label">BUILD PLAN</span>
+            <ol id="buildPlanList"></ol>
+          </article>
+
+          <article class="result-card">
+            <span class="card-label">QUESTIONS & AMBIGUITIES</span>
+            <ul id="ambiguitiesList"></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <span>ContextForge 1.0.0</span>
+      <span>Powered by QVAC · Qwen3 600M · On-device inference</span>
+    </footer>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>
