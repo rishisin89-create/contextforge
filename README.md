@@ -113,3 +113,12 @@ Built as an open-source demonstration of on-device AI inference using Tether's Q
 ## License
 
 MIT License
+
+## Health Check
+
+ContextForge exposes a local health endpoint for verifying the application runtime:
+
+    http://localhost:3000/health
+
+The endpoint reports the application status, QVAC availability, model loading state, SDK version, and local model information.
+
