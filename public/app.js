@@ -116,3 +116,24 @@ analyzeBtn.addEventListener("click", async () => {
     analyzeBtn.textContent = "Analyze Requirements →";
   }
 });
+
+const exampleRequirements =
+  "Build a college event management website. Students should be able to browse upcoming events, register for events, and receive confirmation. Organizers should be able to create events, manage registrations, and view attendee lists. The website should have a dashboard, authentication, event search, and an admin panel. It should work well on mobile devices.";
+
+const textarea = document.querySelector("textarea");
+const actionArea = document.querySelector(".input-footer");
+
+if (textarea && actionArea) {
+  const exampleButton = document.createElement("button");
+  exampleButton.type = "button";
+  exampleButton.textContent = "Load Example";
+  exampleButton.className = "secondary-button";
+
+  exampleButton.addEventListener("click", () => {
+    textarea.value = exampleRequirements;
+    textarea.dispatchEvent(new Event("input"));
+    textarea.focus();
+  });
+
+  actionArea.insertBefore(exampleButton, actionArea.firstChild);
+}
